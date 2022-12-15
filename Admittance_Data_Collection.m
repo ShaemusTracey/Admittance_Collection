@@ -178,7 +178,7 @@ for i = 1:((max_F-min_F)/step + 1)
         pause(t);
         temp = fread(DS1052);               % Read in Data as Type Double
         pause(t);
-        raw_Data_CH1(:,i) =  temp(11:end);  % Delete Header 
+        raw_Data_CH1(:,i) =  temp(11:end);  % Delete Header
         fprintf(scope, ':WAV:DATA? CHAN2'); % Request Data from DS1052 Channel 2
         pause(t);
         temp = fread(DS1052);               % Read in Data as Type Double
